@@ -1,5 +1,4 @@
 const todoList = document.querySelector('.item');
-const inputTodo = document.querySelector('.todo-input');
 const addList = document.querySelector('.add');
 
 const todo = [
