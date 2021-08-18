@@ -1,6 +1,4 @@
 const todoList = document.querySelector('.item');
-const addList = document.querySelector('.add');
-
 const todo = [
   {
   "description" : 'Todo list one',
@@ -24,7 +22,6 @@ const displayList = () => {
   for(let i = 0; i<todo.length; i++) {
     const list = document.createElement('li');
     list.innerHTML += `${todo[i].description}`;
-    console.log(list);
     populateList = todoList.appendChild(list);
   }
   return populateList;
