@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.item li {
+  list-style: none;
+  padding: 5px 0;
+  text-align: justify;
+}
