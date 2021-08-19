@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.todo-container {
+  width: 300px;
+  margin-left: 50px;
+}
+
+.item li {
+  display: grid;
+  grid-template-columns: 10% 60% 30%;
+}
+
+.item li i {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.todo-input {
+  width: 100%;
+}
+
+.check {
+  text-decoration: line-through;
+}
