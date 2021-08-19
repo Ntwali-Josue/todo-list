@@ -1,5 +1,8 @@
+import "./styles.css";
+import Completed from "./complete.js";
+
 const todoList = document.querySelector(".item");
-const todo = [
+const todo = JSON.parse(localStorage.getItem("todo")) || [
   {
     description: "Todo list one",
     completed: false,
@@ -18,10 +21,14 @@ const todo = [
 ];
 
 const displayList = () => {
-  for (let i = 0; i < todo.length; i++) {
-    todoList.innerHTML += `<li class="list-group-item"><input type="checkbox"><p>${todo[i].description}</p><i class="fa fa-ellipsis-v" aria-hidden="true"></i></li>`;
-  }
-  return todoList;
+  todo.forEach((item) => {
+    const Iscompleted = item.completed ? "checked" : "";
+    const check = item.completed ? "check" : "";
+    todoList.innerHTML += `<li class="list-group-item"><input type="checkbox" class="checkbox" ${Iscompleted}>
+    <p class="task-desc ${check}">${item.description}</p><i class="fa fa-ellipsis-v" aria-hidden="true"></i></li>`;
+    return todoList;
+  });
+  Completed.completeTask(todo);
 };
 
 displayList();
