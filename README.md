@@ -4,8 +4,8 @@
 
 > In this project,I build a simple HTML list of To Do tasks.
 
-<!-- ![screenshot](./app_screenshot.png)
-This simple web page will be built using webpack and served by a webpack dev server. -->
+![screenshot](./app_screenshot.png)
+This simple web page is built using webpack and served by a webpack dev server.
 
 ## Built With
 
@@ -18,7 +18,7 @@ This simple web page will be built using webpack and served by a webpack dev ser
 
 ## Author
 
-👤 **Author**
+👤 **KARANGWA Ntwali Josue**
 
 - GitHub: [Ntwali-Josue](https://github.com/Ntwali-Josue)
 - Twitter: [JosueNtwali](https://twitter.com/JosueNtwali)
