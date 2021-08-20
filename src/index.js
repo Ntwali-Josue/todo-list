@@ -79,4 +79,17 @@ const editTask = () => {
     });
   });
 }
+
 editTask();
+
+const clearAll = () => {
+  const clearSelected = document.querySelector('#clearSelected');
+  clearSelected.addEventListener('click', () => {
+    todo = todo.filter((task) => !task.completed);
+    clearItem();
+    displayList();
+    Completed.updateLocalStorage(todo);
+  })
+}
+
+clearAll();
