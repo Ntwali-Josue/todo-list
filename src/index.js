@@ -2,14 +2,14 @@ import "./styles.css";
 import Completed from "./modules/complete.js";
 
 const todoList = document.querySelector(".item");
-const todo = JSON.parse(localStorage.getItem("todo")) || [];
+let todo = JSON.parse(localStorage.getItem("todo")) || [];
 
 const displayList = () => {
   todo.forEach((item, index) => {
     const Iscompleted = item.completed ? "checked" : "";
     const check = item.completed ? "check" : "";
     item.index = index; 
-    todoList.innerHTML += `<li class="list-group-item" id="${item.index}"><input type="checkbox" class="checkbox" ${Iscompleted}>
+    todoList.innerHTML += `<li class="list-group-item task" id="${item.index}"><input type="checkbox" class="checkbox" ${Iscompleted}>
     <p class="task-desc ${check}">${item.description}</p>
     <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
     </li>`;
@@ -48,3 +48,19 @@ const addTask = () => {
 }
 
 addTask()
+
+const deleteTask =  () => {
+  const deleteIcon = document.querySelector('.fa-ellipsis-v');
+  deleteIcon.addEventListener('click', (e) => {
+  const target = e.target;
+  if (target) {
+    todo = todo.filter((item) => item.index !== parseInt(target.parentNode.id));
+    clearItem();
+    displayList();
+    Completed.updateLocalStorage(todo);
+  }
+  e.preventDefault();
+  });
+}
+
+deleteTask();
