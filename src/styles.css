@@ -1,10 +1,11 @@
-body {
+* {
   margin: 0;
   padding: 0;
 }
 
 .todo-container {
   width: 300px;
+  margin-left: 50px;
 }
 
 .item li {
@@ -19,4 +20,9 @@ body {
 
 .todo-input {
   width: 100%;
+}
+
+.check {
+  text-decoration: line-through;
+  color: #b8b8b8;
 }
