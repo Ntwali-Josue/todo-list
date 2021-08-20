@@ -64,3 +64,19 @@ const deleteTask =  () => {
 }
 
 deleteTask();
+
+const editTask = () => {
+  const taskDescr = document.querySelectorAll('.task-desc');
+  taskDescr.forEach((task, index) => {
+    task.addEventListener('keydown', (e) => {
+      const { value } = task;
+      if (e.key === 'Enter' && value !== '') {
+        todo[index].description = value;
+        todoList.innerHTML = '';
+        displayList();
+        Completed.updateLocalStorage(todo);
+      }
+    });
+  });
+}
+editTask();
