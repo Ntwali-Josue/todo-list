@@ -35,3 +35,7 @@
 i {
   cursor: pointer;
 }
+
+.task-desc {
+  border: none;
+}
