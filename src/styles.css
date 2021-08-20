@@ -39,3 +39,13 @@ i {
 .task-desc {
   border: none;
 }
+
+.clear {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.clear a {
+  color: #575757;
+}
