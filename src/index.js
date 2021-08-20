@@ -10,7 +10,7 @@ const displayList = () => {
     const check = item.completed ? "check" : "";
     item.index = index; 
     todoList.innerHTML += `<li class="list-group-item task" id="${item.index}"><input type="checkbox" class="checkbox" ${Iscompleted}>
-    <p class="task-desc ${check}">${item.description}</p>
+    <input type="text" class="task-desc ${check}" value=${item.description}>
     <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
     </li>`;
     return todoList;
