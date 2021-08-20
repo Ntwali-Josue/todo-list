@@ -1,24 +1,8 @@
 import "./styles.css";
-import Completed from "./complete.js";
+import Completed from "./modules/complete.js";
 
 const todoList = document.querySelector(".item");
-const todo = JSON.parse(localStorage.getItem("todo")) || [
-  {
-    description: "Todo list one",
-    completed: false,
-    index: 1,
-  },
-  {
-    description: "Todo list two",
-    completed: false,
-    index: 2,
-  },
-  {
-    description: "Todo list three",
-    completed: false,
-    index: 3,
-  },
-];
+const todo = JSON.parse(localStorage.getItem("todo")) || [];
 
 const displayList = () => {
   todo.forEach((item) => {
@@ -32,3 +16,26 @@ const displayList = () => {
 };
 
 displayList();
+
+const addTask = () => {
+  const input = document.get('.task-desc') || '';
+  input.addEventListener('keydown', (e) => {
+    if(e.key === "Enter") {
+      e.preventDefault();
+      const task = input.value;
+      if(task) {
+        const addedTask = {
+          description : task,
+          completed : false,
+          index : todo.length
+        }
+        todo.push(addedTask);
+        displayList();
+        Completed.updateLocalStorage(todo);
+      }
+      input.value = '';
+    }
+  })
+}
+
+addTask()
