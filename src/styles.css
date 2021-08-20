@@ -11,7 +11,7 @@
 
 .item li {
   display: grid;
-  grid-template-columns: 10% 60% 30%;
+  grid-template-columns: 10% 85% 5%;
 }
 
 .item li i {
@@ -26,4 +26,8 @@
 .check {
   text-decoration: line-through;
   color: #b8b8b8;
+}
+
+#delete {
+  display: none;
 }
