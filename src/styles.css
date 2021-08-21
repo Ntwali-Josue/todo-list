@@ -5,12 +5,17 @@
 
 .todo-container {
   width: 300px;
-  margin-left: 50px;
+  margin-left: 30%;
+  box-shadow: 5px 5px 5px #b8b8b8;
 }
 
 .item li {
   display: grid;
-  grid-template-columns: 10% 60% 30%;
+  grid-template-columns: 10% 85% 5%;
+}
+
+i {
+  cursor: pointer;
 }
 
 .item li i {
@@ -25,4 +30,22 @@
 .check {
   text-decoration: line-through;
   color: #b8b8b8;
+}
+
+#delete {
+  display: none;
+}
+
+.task-desc {
+  border: none;
+}
+
+.clear {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.clear a {
+  color: #575757;
 }
